@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 1.75rem;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f7f7;
+  color: #201e1f;
+  /* this is being used to center the content on the screen */
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.card {
+  display: grid;
+  gap: 0.75em;
+  width: min(90%, 60rem);
+  padding: 2em;
+  box-shadow: #201e1f 0px 5px 15px;
+  border-radius: 5px;
+}
+.card__title {
+  color: #da3f0b;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+.btn--primary {
+  background-color: #da3f0b;
+  color: #f8f7f7;
+  border: 2px solid #da3f0b;
+}
+.btn--primary:hover, .btn--primary:focus {
+  box-shadow: #da3f0b 0px 5px 15px;
+  background-color: #201e1f;
+}
+.btn--outline {
+  background-color: #f8f7f7;
+  color: #da3f0b;
+  border: 2px solid #da3f0b;
+}
+.btn--outline:hover, .btn--outline:focus {
+  box-shadow: #da3f0b 0px 5px 15px;
+  background-color: #201e1f;
+  color: #f8f7f7;
+}
+
+.flex-group {
+  display: flex;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=variabel-challenge.css.map */
