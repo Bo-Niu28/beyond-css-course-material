@@ -1,3 +1,33 @@
+@mixin linearGradient($deg, $clr-1, $clr-2) {
+  background-image: linear-gradient($deg, $clr-1, $clr-2);
+}
+@mixin pseudo-underline($width, $height, $clr, $margin) {
+  &::after {
+    content: "";
+    display: block;
+    width: $width;
+    height: $height;
+    background-color: $clr;
+    margin: $margin auto;
+  }
+}
+
+@mixin ui-element(
+  $size,
+  $color,
+  $bg-color,
+  $hover-color: none,
+  $hover-bg-color: none
+) {
+  padding: $size calc(3 * $size);
+  color: $color;
+  background-color: $bg-color;
+  &:hover {
+    color: $hover-color;
+    background-color: $hover-bg-color;
+  }
+}
+
 body {
   font-family: system-ui;
   margin: 0;
@@ -8,4 +38,31 @@ body {
 .section-three {
   text-align: center;
   padding: 10vh 0;
+  .title {
+    @include pseudo-underline(10rem, 4px, rgb(black, 0.8), 2rem);
+  }
+}
+
+.section-one {
+  @include linearGradient(45deg, yellow, red);
+  .button-one {
+    @include ui-element(1em, white, black, black, white);
+  }
+}
+
+.section-two {
+  @include linearGradient(-45deg, rgb(78, 123, 182), rgb(142, 199, 118));
+  .button-two {
+    @include ui-element(1.2em, white, black, black, white);
+  }
+}
+
+.section-three {
+  @include linearGradient(30deg, blue, purple);
+}
+
+.badge-one {
+  display: inline-block;
+  justify-self: center;
+  @include ui-element(0.7em, black, white);
 }

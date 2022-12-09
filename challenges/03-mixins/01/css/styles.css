@@ -1,0 +1,65 @@
+body {
+  font-family: system-ui;
+  margin: 0;
+}
+
+.section-one,
+.section-two,
+.section-three {
+  text-align: center;
+  padding: 10vh 0;
+}
+.section-one .title::after,
+.section-two .title::after,
+.section-three .title::after {
+  content: "";
+  display: block;
+  width: 10rem;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin: 2rem auto;
+}
+
+.section-one {
+  background-image: linear-gradient(45deg, yellow, red);
+}
+.section-one .button-one {
+  padding: 1em 3em;
+  color: white;
+  background-color: black;
+}
+.section-one .button-one:hover {
+  color: black;
+  background-color: white;
+}
+
+.section-two {
+  background-image: linear-gradient(-45deg, rgb(78, 123, 182), rgb(142, 199, 118));
+}
+.section-two .button-two {
+  padding: 1.2em 3.6em;
+  color: white;
+  background-color: black;
+}
+.section-two .button-two:hover {
+  color: black;
+  background-color: white;
+}
+
+.section-three {
+  background-image: linear-gradient(30deg, blue, purple);
+}
+
+.badge-one {
+  display: inline-block;
+  justify-self: center;
+  padding: 0.7em 2.1em;
+  color: black;
+  background-color: white;
+}
+.badge-one:hover {
+  color: none;
+  background-color: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
